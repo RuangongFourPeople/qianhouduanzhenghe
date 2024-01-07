@@ -5,6 +5,18 @@
 
 html { transition: background-color .3s ease; }
 
+
+.display {
+  width: 620px;
+  margin: 0 auto;
+}
+.end_image {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000;
+  display: inline-block;
+}
+
 body {
   font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
   "Microsoft YaHei", Helvetica, Arial, sans-serif,
@@ -73,7 +85,7 @@ ul, ol { list-style: none; }
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
+
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
