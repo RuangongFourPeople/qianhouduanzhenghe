@@ -44,7 +44,6 @@ public class FileController {
     public String download(HttpServletResponse resp, String filename) throws IOException{
         File file = new File(path+filename);
         if(!file.exists()) return "文件不存在！";
-
         resp.reset();
         resp.setContentType("application/force-download");
         resp.setCharacterEncoding("utf-8");

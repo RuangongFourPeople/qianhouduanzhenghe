@@ -16,7 +16,8 @@ import hyper_net
 import torch.utils.data
 import matplotlib.pyplot as plt
 import spectral
-
+import http.server
+import socketserver
 '''
 参数设置：
 samples_per_class:每类样本数量（默认每类20个）
@@ -221,6 +222,14 @@ for current_trial_turn in range(args.trial_turn):
 # 输出数据和ground truth
 outputs_chart.output_data(save_path, dict_args)
 ground_truth_print = spectral.imshow(classes=ground_truth.astype(int))
+PORT = 8000
+
+Handler = http.server.SimpleHTTPRequestHandler
+
+with socketserver.TCPServer(("", PORT), Handler) as httpd:
+    print("serving at port", PORT)
+    httpd.serve_forever()
+    
 plt.axis('off')
 plt.savefig(save_path + 'ground_truth' + '.png', dpi=300)
 if args.verbose:
