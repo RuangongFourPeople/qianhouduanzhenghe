@@ -11,7 +11,7 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>2.2.12</spring-boot.version>
+        <spring-boot.version>2.7.5</spring-boot.version>
     </properties>
     <dependencies>
         <dependency>
@@ -23,6 +23,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jmatio</groupId>
+            <artifactId>jmatio</artifactId>
+            <version>1.5.1</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
